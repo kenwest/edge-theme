@@ -131,35 +131,11 @@
 
 .front {
   .region-header {
-    background: rgba(0, 0, 0, 0) url("/sites/all/themes/smith/smith-2016-perth.jpg") repeat scroll 50% 50%;
-    background-size: cover;
     padding: 1px 0;
     margin: 0 0 @line-height-computed;
 
     section {
       .container;
-    }
-  }
-
-  .smith-byline {
-    p {
-      background-color: white;
-      font-style: italic;
-      color: @brand-primary;
-      font-weight: 600;
-      border-radius: 5px;
-      opacity: .9;
-
-      // Mobile:
-        padding: @line-height-computed @grid-gutter-width;
-        font-size: @font-size-h4;
-        line-height: @line-height-large;
-        margin-bottom: 0;
-      @media (min-width: @screen-sm-min) {
-        padding: (2*@line-height-computed) (2*@grid-gutter-width);
-        font-size: @font-size-h3;
-        margin-bottom: (2*@line-height-computed);
-      }
     }
   }
 }
