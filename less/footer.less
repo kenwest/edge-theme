@@ -1,0 +1,23 @@
+.footer {
+  background-color: @text-color;
+  color: white;
+  width: 100%;
+
+  a {
+    color: white;
+  }
+}
+
+.logos-live-cbf-attribution {
+  margin-top: -(@grid-gutter-width);
+  // Mobile:
+    width: 100%;
+  @media (min-width: @screen-xs-min) {
+    width: 50%;
+    float: right;
+  }
+
+  img {
+    .img-responsive;
+  }
+}

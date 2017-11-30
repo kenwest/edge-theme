@@ -1,0 +1,195 @@
+.navbar.container {
+  margin-top: 0;
+  max-width: 100%;
+  
+  .navbar-brand {
+    margin-left: 0;
+  }
+}
+
+.navbar-default {
+  margin: 0;
+  border: 0;
+  padding: @line-height-computed 0 0;
+  background-color: white;
+  width: 100%;
+
+  .navbar-brand,
+  .navbar-brand:hover,
+  .navbar-brand:focus {
+    color: @brand-primary;
+  }
+
+  .navbar-brand {
+    float: none;
+    line-height: (3*@line-height-computed);
+    padding: 0;
+    margin: 0;
+
+    // Mobile and tablet:
+      font-size: @font-size-h3;
+    @media (min-width: 480px) {
+      font-size: @font-size-h1;
+    }
+    @media (min-width: @screen-sm-min) {
+      font-size: 44px;
+    }
+  }
+
+  .navbar-collapse {
+    padding: 0;
+    margin: 0;
+  }
+
+  .primary-nav {
+    background-color: @brand-primary;
+    width: 100%;
+    font-size: @font-size-large;
+    margin: 0;
+    float: left;
+
+    .navbar-nav {
+      .container;
+
+      float: none;
+      padding: 0;
+      margin: 0 auto;
+
+      > .leaf {
+        > a,
+        > a:hover,
+        > a:focus {
+          color: white;
+          background-color: @brand-primary;
+          font-weight: bold;
+        }
+      }
+
+      > .active {
+        > a,
+        > a:hover,
+        > a:focus {
+          color: white;
+          background-color: @text-color;
+          font-weight: bold;
+        }
+      }
+
+      > .leaf {
+        > a {
+          // Mobile and tablet:
+            padding: floor(@line-height-computed/2) floor(@grid-gutter-width/2);
+          @media (min-width: @screen-sm-min) {
+            padding: @line-height-computed floor(@grid-gutter-width/2);
+          }
+        }
+      }
+
+      > .leaf.first {
+        > a {
+          padding-top: @line-height-computed;
+        }
+      }
+
+      > .leaf.last {
+        > a {
+          padding-bottom: @line-height-computed;
+        }
+      }
+    }
+  }
+
+  .navbar-header {
+    .container;
+
+    float: none;
+    padding-bottom: @line-height-computed;
+
+    .logo {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      // Mobile:
+        max-width: 60%;
+        padding-left: 0;
+      @media (min-width: @screen-xs-min) {
+        width: 180px;
+        padding-right: @grid-gutter-width;
+        height: (4*@line-height-computed);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    margin: 0;
+  }
+}
+
+.front {
+  .region-header {
+    background: rgba(0, 0, 0, 0) url("/sites/all/themes/smith/smith-2016-perth.jpg") repeat scroll 50% 50%;
+    background-size: cover;
+    padding: 1px 0;
+    margin: 0 0 @line-height-computed;
+
+    section {
+      .container;
+    }
+  }
+
+  .smith-byline {
+    p {
+      background-color: white;
+      font-style: italic;
+      color: @brand-primary;
+      font-weight: 600;
+      border-radius: 5px;
+      opacity: .9;
+
+      // Mobile:
+        padding: @line-height-computed @grid-gutter-width;
+        font-size: @font-size-h4;
+        line-height: @line-height-large;
+        margin-bottom: 0;
+      @media (min-width: @screen-sm-min) {
+        padding: (2*@line-height-computed) (2*@grid-gutter-width);
+        font-size: @font-size-h3;
+        margin-bottom: (2*@line-height-computed);
+      }
+    }
+  }
+}
+
+.block-search {
+  .container;
+
+  form#search-block-form {
+    .make-row();
+
+    margin-top: @line-height-computed;
+    margin-bottom: @line-height-computed;
+
+    .input-group {
+      .make-xs-column(12);
+      .make-sm-column(4);
+      .make-sm-column-offset(8);
+    }
+  }
+
+  .form-control {
+    height: (2*@line-height-computed);
+    padding: (floor(@line-height-computed/2) - 1) floor(@grid-gutter-width / 2); /* 1px border */
+  }
+
+  .btn {
+    padding: (floor(@line-height-computed/2) - 1) floor(@grid-gutter-width / 2); /* 1px border */
+  }
+
+  .form-group {
+    margin: 0;
+  }
+}

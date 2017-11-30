@@ -1,0 +1,538 @@
+/*
+ * Common text formatting
+ */
+
+/*
+ * Rather than having an empty paragraph, format the previous paragraph with a
+ * margin-bottom that is the same as if an empty paragraph was present. This is
+ * a paragraph line-height plus 2 paragraph margin-bottoms (1 + 2 * 0.5 = 2).
+ */
+.paragraph-plus-spacer {
+  margin-bottom: (@line-height-computed * 2);
+}
+
+/*
+ * Format paragraphs with left and right aligned images
+ */
+.paragraph-image-left,
+.paragraph-image-right {
+  clear: both;
+
+  img {
+    max-width: 50% !important;
+    height: auto !important;
+  }
+
+  + p {
+    clear: both;
+  }
+}
+
+.paragraph-image-left {
+  img {
+    float: left !important;
+    margin: 0 floor(@grid-gutter-width / 2) @line-height-computed 0 !important;
+    padding: 0 floor(@grid-gutter-width / 2) 0 0 !important;
+  }
+}
+
+.paragraph-image-right {
+  img {
+    float: right !important;
+    margin: 0 0 @line-height-computed floor(@grid-gutter-width / 2) !important;
+    padding: 0 0 0 floor(@grid-gutter-width / 2) !important;
+  }
+}
+
+.stack {
+  .make-row();
+
+  .box {
+    .make-xs-column(12);
+    .make-md-column(6);
+  }
+}
+
+.link-button {
+  .badge;
+
+  background-color: @brand-primary;
+  font-size: @font-size-base;
+  padding: floor(@line-height-computed / 2) floor(@grid-gutter-width / 2);
+  border-radius: @line-height-computed;
+
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+/*
+ * Common views formatting
+ */
+.view {
+
+  /*
+   * Views can be nested if a view is empty and invokes another view.
+   * Don't pad nested empty views.
+   */
+  .view-empty {
+    .view-content,
+    .view-empty,
+    .views-exposed-form {
+      padding: 0 !important;
+    }
+
+    /*
+     * Hide the more-link if the view is empty
+     */
+    + .more-link {
+      display: none !important;
+    }
+  }
+
+  .view-grouping {
+    .view-grouping-header {
+      font-size: @font-size-h3;
+      line-height: @line-height-large;
+      font-weight: bold;
+    }
+  }
+
+  .views-table {
+    caption {
+      font-size: @font-size-h4;
+      line-height: @line-height-large;
+      font-weight: bold;
+    }
+  }
+}
+
+/*
+ * Common page formatting
+ */
+.page-civicrm-event,
+.page-node {
+  .tabs--primary.nav-tabs,
+  ul.action-links {
+    display: none;
+  }
+}
+
+/*
+ * Common block formatting
+ */
+.block-system,
+.block-views,
+.block-block {
+  margin-bottom: (2 * @line-height-computed);
+}
+
+/*
+ * Common fields formatting
+ */
+.block {
+
+  /*
+   * Embedded videos are responsive and have a 16:9 aspect ratio
+   */
+
+  div.video-filter {
+    .embed-responsive;
+    .embed-responsive-16by9;
+
+    margin-bottom: @line-height-computed;
+  }
+
+  /*
+   * jPlayer configuration
+   */
+
+  @font-size-jplayer-button-large: floor(@font-size-base * 3);
+  @font-size-jplayer-button-small: @font-size-large;
+  @gray-jplayer-background:        lighten(@text-color, 50%);
+
+  div.jp-audio {
+    color: @text-color;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+
+    div.jp-type-playlist {
+      div.jp-interface {
+        height: 80px;
+      }
+
+      div.jp-playlist {
+        a.jp-playlist-current {
+          color: @link-color;
+        }
+
+        a.jp-playlist-current:hover,
+        a.jp-playlist-current:focus {
+          color: @link-hover-color;
+          text-decoration: underline;
+        }
+      }
+
+      a.jp-play,
+      a.jp-pause {
+        top: 20px;
+      }
+
+      div.jp-progress {
+        top: 32px;
+        height: 15px;
+        position: absolute;
+        overflow: hidden;
+      }
+
+      div.jp-current-time,
+      div.jp-duration {
+        top: 49px;
+        position: absolute;
+        font-style: oblique;
+      }
+
+      div.jp-duration {
+        text-align: right;
+      }
+
+      a.jp-mute,
+      a.jp-unmute {
+        top: 32px;
+        width: 18px;
+        height: 18px;
+      }
+
+      div.jp-volume-bar {
+        top: 37px;
+        height: 5px;
+        position: absolute;
+        overflow: hidden;
+      }
+    }
+  }
+
+  div.jp-interface {
+    background-color: inherit;
+    border: 0;
+    position: relative;
+    width: 100%;
+
+    ul.jp-controls {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline;
+      }
+
+      a {
+        color: @text-color;
+        text-indent: 0;
+        position: absolute;
+        overflow: hidden;
+      }
+
+      a:hover,
+      a:focus {
+        color: @link-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  div.jp-playlist {
+    background-color: inherit;
+    border-width: 0;
+    width: 100%;
+
+    ul,
+    div.jp-playlist-comment {
+      font-size: 0.9em;
+      list-style-type: none;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    li.jp-playlist-current {
+      list-style-type: square;
+      list-style-position: inside;
+      padding-left: 8px;
+    }
+
+    li.jp-playlist-last {
+      padding: 5px 0 5px 20px;
+      border-bottom: none;
+    }
+  }
+
+  div.jp-play-bar,
+  div.jp-volume-bar-value {
+    background: @text-color;
+  }
+
+  div.jp-seek-bar,
+  div.jp-volume-bar {
+    background: @gray-jplayer-background;
+    cursor: pointer;
+  }
+
+  div.jp-seek-bar {
+    height: 100%;
+  }
+
+  div.jp-volume-bar-value {
+    height: 5px;
+  }
+
+  div.jp-current-time,
+  div.jp-duration {
+    font-size: 0.8em;
+  }
+
+  a.jp-next,
+  a.jp-previous,
+  a.jp-stop {
+    display: none;
+  }
+
+  div.jp-volume-bar,
+  a.jp-mute,
+  a.jp-unmute {
+    // Mobile:
+      visibility: hidden;
+    @media (min-width: @screen-xs-min) {
+      visibility: visible;
+    }
+  }
+
+  a.jp-play:before {
+    content: "\f01d";
+    font-size: @font-size-jplayer-button-large;
+  }
+
+  a.jp-pause:before {
+    content: "\f28c";
+    font-size: @font-size-jplayer-button-large;
+  }
+
+  a.jp-mute:before {
+    content: "\f026";
+    font-size: @font-size-jplayer-button-small;
+  }
+
+  a.jp-unmute:before {
+    content: "\f028";
+    font-size: @font-size-jplayer-button-small;
+  }
+
+  a.jp-play,
+  a.jp-pause,
+  a.jp-mute,
+  a.jp-unmute {
+    background: none;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 0;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a.jp-play:hover,
+  a.jp-pause:hover,
+  a.jp-mute:hover,
+  a.jp-unmute:hover {
+    background: none;
+  }
+
+  /*
+   * AddThis block formatting
+   */
+
+  .addthis_toolbox {
+    margin-top: (2*@line-height-computed);
+
+    a.at300b {
+      height: (2*@line-height-computed);
+      margin: 0;
+    }
+
+    a.addthis_button_facebook {
+      // Mobile:
+        clear: left;
+      @media (min-width: @screen-xs-min) {
+        clear: none;
+      }
+    }
+  }
+}
+
+/*
+ * Common CiviCRM formatting
+ */
+.block {
+  .crm-container,
+  .crm-container-snippet {
+    padding: 0;
+
+    .crm-section {
+      .label {
+        color: inherit;
+        font-size: 100%;
+        white-space: inherit;
+
+        label {
+          display: inline-block;
+        }
+
+        .crm-marker {
+          float: right;
+          margin-right: -(@grid-gutter-width / 2);
+        }
+      }
+
+      .content {
+        padding: 5px;
+      }
+    }
+  }
+
+  .crm-container.crm-public {
+    .select2-container {
+      .select2-choice {
+        height: auto !important;
+      }
+    }
+  }
+
+  .crm-container .credit_card_type-section .crm-credit_card_type-icons a {
+    width: 52px;
+    height: 33px;
+  }
+}
+
+/*
+ * Common webform formatting
+ */
+form {
+  .webform-component {
+    label.control-label {
+      display: inline-block;
+      width: 110px;
+    }
+
+    ul.token-input-list {
+      font-size: initial;
+      font-family: inherit;
+    }
+
+    li.token-input-token {
+      color: @text-color;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      line-height: ceil(@font-size-large * @line-height-large);
+
+      span.token-input-delete-token {
+        padding-left: 10px;
+        font-size: @font-size-large;
+        color: @text-color;
+      }
+    }
+
+    li.token-input-selected-token {
+      color: white;
+      background-color: @text-color;
+      border: 1px solid #ccc;
+
+      span.token-input-delete-token {
+        color: white;
+      }
+    }
+
+    input.email {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  .captcha {
+    margin: @line-height-computed 0;
+  }
+
+  .deform {
+    .webform-component {
+      .form-control[readonly] {
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: unset;
+      }
+    }
+  }
+}
+
+div.token-input-dropdown {
+  font-size: initial !important;
+  font-family: inherit !important;
+}
+
+
+.progress.payment {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+
+  .progress-bar {
+    width: 33.33%;
+    padding: 5px;
+    font-size: inherit;
+
+    &.past {
+      background-color: @text-color;
+    }
+
+    &.present {
+      font-weight: bold;
+      background-color: @brand-primary;
+    }
+
+    &.future {
+      background-color: lighten(@brand-primary, 20%);
+    }
+  }
+}
+
+
+/*
+ * GMap configuration
+ */
+.gmap {
+  width: 100% !important;
+
+  .gmap-popup {
+    .views-field {
+      margin: 0;
+      font-size: @font-size-base;
+      line-height: @line-height-computed;
+    }
+  }
+}
+
+/*
+ * Common IFRAME formatting
+ */
+iframe {
+  max-width: 100%;
+}
+
+/*
+ * Prevent date pickers from being obscured by other items
+ */
+#ui-datepicker-div {
+  z-index: 99 !important;
+}

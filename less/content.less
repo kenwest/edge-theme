@@ -1,0 +1,481 @@
+/*
+ * Constants
+ */
+@view-thumbnail-width:  (2 * @grid-gutter-width);                                  // ~60px
+@view-thumbnail-height: (3 * @line-height-computed);                               // ~60px
+@view-thumbnail-gutter: (@view-thumbnail-width + floor(@grid-gutter-width / 2));   // ~75px
+
+/*
+ * Generic formatting
+ */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 @line-height-computed;
+  color: @brand-primary;
+}
+
+h1, h2, h3, h4 {
+  line-height: @line-height-large;
+}
+
+h5, h6 {
+  line-height: @line-height-computed;
+}
+
+p {
+  margin: 0 0 @line-height-computed;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+  margin-top: (2*@line-height-computed);
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+// Use contextual links for actions on Nodes. Affects staff only.
+.page-node {
+  .tabs--primary.nav-tabs {
+    display: none;
+  }
+}
+
+.main-container {
+  padding-top: @line-height-computed;
+}
+
+.page-header,
+.block-title,
+.views-field-title {
+  padding: 0;
+  border: 0;
+  margin: 0 0 @line-height-computed;
+  display: flex;
+  line-height: @line-height-large;
+
+  i {
+    min-width: @view-thumbnail-width;
+    margin-right: floor(@grid-gutter-width / 2);
+    line-height: @line-height-large;
+  }
+}
+
+/*
+ * Views
+ */
+.view-header {
+  margin-left: @view-thumbnail-gutter;
+}
+
+.view-header +.view-content,
+.views-row + .views-row {
+  padding-top: @line-height-computed;
+}
+
+.views-row + h3 {
+  padding-top: (2 * @line-height-computed);
+}
+
+.view-content > h3 {
+  color: @brand-secondary;
+}
+
+/*
+ * Views fields
+ */
+.views-field-field-in-activity {
+  display: none;
+}
+
+.views-field-field-thumbnail-image,
+.views-field-field-is-audio,
+.views-field-field-is-text,
+.views-field-field-is-video {
+  float: left;
+  clear: left;
+  width: @view-thumbnail-width;
+  height: @view-thumbnail-height;
+
+  i {
+    min-width: @view-thumbnail-width;
+    height: @view-thumbnail-height;
+    font-size: (@view-thumbnail-height - @line-height-computed);
+  }
+}
+
+.views-field-title,
+.views-field-field-in-activity,
+.views-field-field-speakers,
+.views-field-field-date-text,
+.views-field-taxonomy-vocabulary-1,
+.views-field-taxonomy-vocabulary-1-1,
+.views-field-field-staff-contact,
+.views-field-field-subtitle,
+.views-field-body,
+.views-field-summary {
+  margin-left: @view-thumbnail-gutter;
+}
+
+.views-field-taxonomy-vocabulary-1,
+.views-field-field-in-activity {
+  margin-bottom: @line-height-computed;
+}
+
+.views-field + .views-field-field-subtitle,
+.views-field + .views-field-body,
+.views-field + .views-field-summary {
+  margin-top: @line-height-computed;
+}
+
+.views-field-taxonomy-vocabulary-1,
+.views-field-field-staff-contact,
+.views-field-field-in-activity {
+  font-size: @font-size-large;
+  line-height: @line-height-large;
+}
+
+.views-field-field-date-text {
+  font-style: italic;
+}
+
+/*
+ * Specific view formatting
+ */
+.view-national-library,
+.view-national-news {
+  .more-link {
+    display: none;
+  }
+}
+
+#block-views-exp-national-library-page-1 {
+  .views-exposed-widget.views-widget-filter-title_1 {
+    display: none;
+  }
+}
+
+.view-reaching-city-civicrm-event-price {
+  h3 {
+    margin: 0;
+
+    .Radio,
+    .CheckBox,
+    .Text {
+      display: none;
+    }
+
+    .Select {
+      padding-top: @line-height-computed;
+    }
+  }
+
+  .views-row {
+    padding-top: @line-height-computed;
+    line-height: @line-height-large;
+    font-size: @font-size-large;
+  }
+
+  .views-row + h3 {
+    padding: 0;
+  }
+}
+
+.front {
+  .block-system {
+    .views-field-field-date-text,
+    .views-field-field-subtitle,
+    .views-field-body,
+    .views-field-summary {
+      font-size: @font-size-large;
+      line-height: @line-height-large;
+    }
+  }
+}
+
+/*
+ * Node and entity formatting
+ */
+
+.block-system {
+  margin-bottom: (5*@line-height-computed);
+
+  .field-name-field-in-activity,
+  .blog_usernames_blog {
+    display: none;
+  }
+
+  .field-name-field-image,
+  .field-name-field-series-image,
+  .field-name-field-civievent,
+  .field-name-field-add-to-calendar {
+    float: right;
+    clear: right;
+    max-width: 50%;
+    margin-left: floor(@grid-gutter-width/2);
+    padding-left: floor(@grid-gutter-width/2);
+
+    .field-item {
+      margin-bottom: @line-height-computed;
+    }
+
+    img {
+      .img-responsive;
+    }
+  }
+
+  .comment-add {
+    margin-bottom: @line-height-computed;
+  }
+
+  .comment-add,
+  .field-name-field-civievent .field-item,
+  .field-name-field-add-to-calendar .field-item {
+    .badge;
+    width: 280px;
+    max-width: 100%;
+    padding: @line-height-computed floor(@grid-gutter-width/2);
+    border-radius: @grid-gutter-width;
+    background: @brand-primary;
+    font-size: @font-size-large;
+    line-height: @line-height-computed;
+
+    a,
+    a:hover,
+    a:focus {
+      font-weight: bold;
+      color: white;
+      background: @brand-primary;
+    }
+
+    .dropdown a {
+      padding: 0;
+      height: @line-height-computed;
+    }
+
+    .dropdown-menu {
+      a,
+      a:hover,
+      a:focus {
+        padding: floor(@grid-gutter-width/4);
+        height: 2*@line-height-computed;
+        text-align: left;
+        font-size: @font-size-base;
+        font-weight: normal;
+        color: @brand-primary;
+        background: white;
+      }
+    }
+  }
+
+  .field-name-field-civievent,
+  .field-name-field-add-to-calendar {
+    .field-item {
+      // Mobile:
+        font-size: @font-size-base;
+      @media (min-width: @screen-xs-min) {
+        font-size: @font-size-large;
+      }
+    }
+  }
+
+  .field-name-field-civievent + .field-name-field-add-to-calendar {
+    display: none; // Hide Add to calendar if there is a CiviEvent
+  }
+
+  .field-name-field-speakers,
+  .field-name-field-bible-reference,
+  .field-name-field-episode-date {
+    .field-label {
+      width: 140px;
+    }
+  }
+
+  .field-name-field-topic,
+  .field-name-field-topics {
+    display: inline;
+
+    .field-label {
+      display: none;
+    }
+
+    .field-items {
+      display: inline;
+    }
+
+    .field-item {
+      .badge;
+      display: inline-block;
+      padding: floor((@line-height-computed - 12px)/2) floor(@grid-gutter-width/3);
+      margin: 0 floor(@grid-gutter-width/3) @line-height-computed 0;
+      background: @text-color;
+      color: white;
+    }
+  }
+
+  .field-name-field-date-text {
+    font-weight: bold;
+  }
+
+  .field-name-field-subtitle,
+  .field-name-field-date-text,
+  .entity-property-summary {
+    font-size: @font-size-large;
+    line-height: @line-height-large;
+  }
+
+  .field-name-field-subtitle,
+  .field-name-field-date-text,
+  .field-name-field-episode-date,
+  .field-name-body,
+  .field-name-field-content,
+  .field-name-field-attachment,
+  .entity-property-summary,
+  .entity-property-description {
+    margin: 0 0 @line-height-computed;
+  }
+
+  .field-name-field-addthis {
+    margin: (2*@line-height-computed) 0;
+    clear: both;
+
+    a.at300b {
+      height: (2*@line-height-computed);
+      margin: 0;
+    }
+
+    a.addthis_button_facebook {
+      // Mobile:
+        clear: left;
+      @media (min-width: @screen-xs-min) {
+        clear: none;
+      }
+    }
+  }
+
+  .entity-property-label {
+    display: none;
+  }
+}
+
+/*
+ * CiviCRM Event entity pages
+ */
+.page-civicrm-event {
+  .views-field-nothing {    /* Address */
+    color: @text-color;
+    line-height: @line-height-large;
+    font-size: @font-size-large;
+  }
+
+  .view-content h3 {
+    color: @text-color;
+    line-height: @line-height-computed;
+    font-size: @font-size-base;
+  }
+
+  .views-field-amount {
+    float: right;
+  }
+
+  .views-field-id {
+    .badge;
+    width: 100%;
+    padding: @line-height-computed floor(@grid-gutter-width/2);
+    border-radius: @grid-gutter-width;
+    background: @brand-primary;
+    font-size: @font-size-large;
+    line-height: @line-height-computed;
+
+    a,
+    a:hover,
+    a:focus {
+      font-weight: bold;
+      color: white;
+      background: @brand-primary;
+    }
+  }
+}
+
+/*
+ * Contact form formatting
+ */
+.contact-form {
+  .form-item {
+    margin-bottom: @line-height-computed;
+  }
+}
+
+/*
+ * jPlayer configuration
+ */
+.block {
+  div.jp-audio {
+
+    // Mobile:
+      width: 100%;
+    @media (min-width: @screen-xs-min) {
+      width: @screen-xs-min;
+    }
+    @media (min-width: @screen-md-min) {
+      width: 720px;
+    }
+
+    div.jp-type-playlist {
+
+      a.jp-play,
+      a.jp-pause {
+        left: 20px;
+      }
+
+      div.jp-volume-bar {
+        width: 46px;
+
+        // Mobile and tablet:
+          left: 324px;
+        @media (min-width: @screen-md-min) {
+          left: 564px;
+        }
+      }
+
+      a.jp-mute,
+      a.jp-unmute {
+
+        // Mobile and tablet:
+          left: 296px;
+        @media (min-width: @screen-md-min) {
+          left: 536px;
+        }
+      }
+
+      div.jp-progress,
+      div.jp-current-time,
+      div.jp-duration {
+        left: 76px;
+
+        // Mobile and tablet:
+          width: 200px;
+        @media (min-width: @screen-md-min) {
+          width: 440px;
+        }
+      }
+
+      div.jp-playlist-comment {
+        line-height: @line-height-computed;
+      }
+
+      li,
+      li.jp-playlist-first,
+      li.jp-playlist-last,
+      li.jp-playlist-current {
+        line-height: @line-height-computed;
+        padding: 0 0 0 floor(@grid-gutter-width/2);
+	border: 0;
+      }
+    }
+  }
+}
