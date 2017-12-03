@@ -77,9 +77,11 @@
   <div class="container">
     <div class="navbar-header">
       <?php if ($logo): ?>
-      <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-      </a>
+        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <object data="<?php print $logo; ?>" type="image/svg+xml">
+            <img src="<?php print str_replace('.svg', '.png', $logo); ?>" alt="<?php print t('Home'); ?>" />
+          </object>
+        </a>
       <?php endif; ?>
 
       <?php if (!empty($site_name)): ?>
