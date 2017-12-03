@@ -8200,6 +8200,10 @@ ul {
 .views-field-field-date-text {
   font-style: italic;
 }
+.views-field-field-highlight-video ul {
+  list-style: none;
+  padding: 0;
+}
 /*
  * Specific view formatting
  */
