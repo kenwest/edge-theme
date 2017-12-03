@@ -7334,6 +7334,11 @@ table .checkbox input[type="checkbox"] {
 .navbar.container {
   margin-top: 0;
 }
+@media (min-width: 768px) {
+  .navbar.container {
+    padding: 0;
+  }
+}
 .navbar.container .navbar-brand {
   margin-left: 0;
 }
