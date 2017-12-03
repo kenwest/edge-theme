@@ -8236,6 +8236,9 @@ ul {
   font-size: 18px;
   line-height: 1.3333333;
 }
+.front .page-header {
+  display: none;
+}
 /*
  * Node and entity formatting
  */
