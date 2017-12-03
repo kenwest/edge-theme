@@ -74,7 +74,6 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="container">
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -121,8 +120,6 @@
         </div>
       </div>
     </div>
-
-  </div>
 </header>
 
 <header role="banner" id="page-header">
