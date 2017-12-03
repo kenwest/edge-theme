@@ -20,48 +20,39 @@
     color: @brand-primary;
   }
 
-  .navbar-brand {
-    float: none;
-    line-height: (3*@line-height-computed);
-    padding: 0;
-    margin: 0;
-
-    // Mobile and tablet:
-      font-size: @font-size-h3;
-    @media (min-width: 480px) {
-      font-size: @font-size-h1;
-    }
-    @media (min-width: @screen-sm-min) {
-      font-size: 44px;
-    }
-  }
-
   .navbar-collapse {
     padding: 0;
     margin: 0;
-  }
+    position: absolute;
+    background-color: white;
+    width: (10 * @grid-gutter-width);
+    max-width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    overflow-y: unset;
 
-  .primary-nav {
-    background-color: @brand-primary;
-    width: 100%;
-    font-size: @font-size-large;
-    margin: 0;
-    float: left;
+    &.panel-group {
+      .panel {
+        border: 0;
+      }
+
+      .panel + .panel{
+        margin-top: 0;
+      }
+    }
+
+    nav {
+      padding: (3 * @line-height-computed) 0 @line-height-computed;
+    }
 
     .navbar-nav {
-      .container;
-
-      float: none;
-      padding: 0;
-      margin: 0 auto;
+      margin: 0;
 
       > .leaf {
         > a,
         > a:hover,
         > a:focus {
-          color: white;
-          background-color: @brand-primary;
-          font-weight: bold;
         }
       }
 
@@ -69,19 +60,16 @@
         > a,
         > a:hover,
         > a:focus {
-          color: white;
-          background-color: @text-color;
           font-weight: bold;
         }
       }
 
       > .leaf {
         > a {
-          // Mobile and tablet:
-            padding: floor(@line-height-computed/2) floor(@grid-gutter-width/2);
-          @media (min-width: @screen-sm-min) {
-            padding: @line-height-computed floor(@grid-gutter-width/2);
-          }
+          padding: 0 floor(@grid-gutter-width / 2);
+          line-height: (2 * @line-height-computed);
+          font-size: @font-size-h4;
+          text-transform: uppercase;
         }
       }
 
@@ -93,39 +81,75 @@
 
       > .leaf.last {
         > a {
-          padding-bottom: @line-height-computed;
         }
       }
     }
   }
 
   .navbar-header {
-    .container;
+    .make-row();
 
-    float: none;
     padding-bottom: @line-height-computed;
 
     .logo {
-      margin-top: 0;
-      margin-bottom: 0;
+      .make-xs-column(7);
+      .make-sm-column(6);
+      .make-md-column(4);
 
+      margin: 0;
+      height: (4 * @line-height-computed);
+
+      // Align text in logo with navbar-toggle
       // Mobile:
-        max-width: 60%;
-        padding-left: 0;
+        padding-top: 5px; 
       @media (min-width: @screen-xs-min) {
-        width: 180px;
-        padding-right: @grid-gutter-width;
-        height: (4*@line-height-computed);
+        padding-top: 9px; 
       }
 
-      img {
+      img,
+      object {
         width: 100%;
+        pointer-events: none;
       }
     }
-  }
+    .navbar-toggles {
+      .make-xs-column(5);
+      .make-sm-column(6);
+      .make-md-column(8);
 
-  .navbar-toggle {
-    margin: 0;
+      .navbar-toggle {
+        margin: 0 floor(@grid-gutter-width / 2);
+        color: @brand-primary;
+        background-color: transparent;
+        z-index: 2;
+        padding: 0;
+        margin: 0;
+        border-width: 0;
+        border-radius: 0;
+
+        // Mobile:
+          width: floor(11/10 * @grid-gutter-width);
+          font-size: @font-size-h4;
+        @media (min-width: @screen-xs-min) {
+          width: floor(3/2 * @grid-gutter-width);
+          font-size: @font-size-h2;
+        }
+        @media (min-width: @screen-sm-min) {
+          width: (2 * @grid-gutter-width);
+        }
+        @media (min-width: @screen-md-min) {
+          font-size: @font-size-h1;
+        }
+
+        &:hover {
+          background-color: white;
+        }
+
+        &:focus {
+          background-color: transparent;
+        }
+      }
+    }
   }
 }
 
