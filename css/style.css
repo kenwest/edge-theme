@@ -7447,30 +7447,20 @@ table .checkbox input[type="checkbox"] {
   margin: 0;
   border-width: 0;
   border-radius: 0;
-  width: 33px;
-  font-size: 18px;
+  width: 45px;
+  font-size: 36px;
 }
 @media (min-width: 480px) {
   .navbar-default .navbar-header .navbar-toggles .navbar-toggle {
-    width: 45px;
-    font-size: 30px;
+    width: 60px;
+    font-size: 48px;
   }
 }
 @media (min-width: 768px) {
   .navbar-default .navbar-header .navbar-toggles .navbar-toggle {
-    width: 60px;
+    width: 90px;
+    font-size: 60px;
   }
-}
-@media (min-width: 992px) {
-  .navbar-default .navbar-header .navbar-toggles .navbar-toggle {
-    font-size: 36px;
-  }
-}
-.navbar-default .navbar-header .navbar-toggles .navbar-toggle:hover {
-  background-color: white;
-}
-.navbar-default .navbar-header .navbar-toggles .navbar-toggle:focus {
-  background-color: transparent;
 }
 .front .region-header {
   padding: 1px 0;
