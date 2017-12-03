@@ -7400,8 +7400,6 @@ table .checkbox input[type="checkbox"] {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0;
-  height: 80px;
-  padding-top: 5px;
 }
 @media (min-width: 768px) {
   .navbar-default .navbar-header .logo {
@@ -7413,11 +7411,6 @@ table .checkbox input[type="checkbox"] {
   .navbar-default .navbar-header .logo {
     float: left;
     width: 33.33333333%;
-  }
-}
-@media (min-width: 480px) {
-  .navbar-default .navbar-header .logo {
-    padding-top: 9px;
   }
 }
 .navbar-default .navbar-header .logo img,
