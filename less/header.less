@@ -47,7 +47,11 @@
     }
 
     nav {
-      padding: (5 * @line-height-computed) 0 @line-height-computed;
+      // Mobile:
+        padding: (3 * @line-height-computed) 0 @line-height-computed;
+      @media (min-width: @screen-sm-min) {
+        padding: (4 * @line-height-computed) 0 @line-height-computed;
+      }
     }
 
     .navbar-nav {

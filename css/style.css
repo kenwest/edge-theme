@@ -7349,7 +7349,12 @@ table .checkbox input[type="checkbox"] {
   margin-top: 0;
 }
 .navbar-default .navbar-collapse nav {
-  padding: 100px 0 20px;
+  padding: 60px 0 20px;
+}
+@media (min-width: 768px) {
+  .navbar-default .navbar-collapse nav {
+    padding: 80px 0 20px;
+  }
 }
 .navbar-default .navbar-collapse .navbar-nav {
   margin: 0;
