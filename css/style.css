@@ -7349,7 +7349,7 @@ table .checkbox input[type="checkbox"] {
   margin-top: 0;
 }
 .navbar-default .navbar-collapse nav {
-  padding: 60px 0 20px;
+  padding: 100px 0 20px;
 }
 .navbar-default .navbar-collapse .navbar-nav {
   margin: 0;
@@ -7357,6 +7357,7 @@ table .checkbox input[type="checkbox"] {
 .navbar-default .navbar-collapse .navbar-nav > .active > a,
 .navbar-default .navbar-collapse .navbar-nav > .active > a:hover,
 .navbar-default .navbar-collapse .navbar-nav > .active > a:focus {
+  background-color: white;
   font-weight: bold;
 }
 .navbar-default .navbar-collapse .navbar-nav > .leaf > a {
