@@ -6875,14 +6875,6 @@ body #admin-menu .dropdown li {
     padding-left: 0;
   }
 }
-ul.secondary {
-  float: left;
-}
-@media screen and (min-width: 768px) {
-  ul.secondary {
-    float: right;
-  }
-}
 .page-header {
   margin-top: 0;
 }
@@ -6899,18 +6891,6 @@ p:last-child {
 }
 .region-help .block {
   overflow: hidden;
-}
-form#search-block-form {
-  margin: 0;
-}
-.navbar #block-search-form {
-  float: none;
-  margin: 5px 0 5px 5px;
-}
-@media screen and (min-width: 992px) {
-  .navbar #block-search-form {
-    float: right;
-  }
 }
 .navbar-search .control-group {
   margin-bottom: 0px;
