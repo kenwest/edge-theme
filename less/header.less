@@ -148,29 +148,18 @@
   }
 }
 
-.block-search {
-  .container;
-
-  form#search-block-form {
-    .make-row();
-
-    margin-top: @line-height-computed;
-    margin-bottom: @line-height-computed;
-
-    .input-group {
-      .make-xs-column(12);
-      .make-sm-column(4);
-      .make-sm-column-offset(8);
-    }
-  }
+.block.block-search {
+  float: none;
+  margin: 0 floor(@grid-gutter-width/2);
+  padding-top: @line-height-computed;
 
   .form-control {
     height: (2*@line-height-computed);
-    padding: (floor(@line-height-computed/2) - 1) floor(@grid-gutter-width / 2); /* 1px border */
+    padding: (floor(@line-height-computed/2) - 1) floor(@grid-gutter-width/2); /* 1px border */
   }
 
   .btn {
-    padding: (floor(@line-height-computed/2) - 1) floor(@grid-gutter-width / 2); /* 1px border */
+    padding: (floor(@line-height-computed/2) - 1) floor(@grid-gutter-width/2); /* 1px border */
   }
 
   .form-group {
