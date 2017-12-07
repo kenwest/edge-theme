@@ -7340,6 +7340,9 @@ table .checkbox input[type="checkbox"] {
   overflow-y: unset;
 }
 .navbar-default .navbar-collapse.panel-group .panel {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   border: 0;
 }
 .navbar-default .navbar-collapse.panel-group .panel + .panel {
