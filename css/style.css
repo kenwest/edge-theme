@@ -8344,7 +8344,7 @@ a.block-system .field-name-field-add-to-calendar .field-item:focus {
 .block-system .field-name-field-speakers .field-label,
 .block-system .field-name-field-bible-reference .field-label,
 .block-system .field-name-field-episode-date .field-label {
-  width: 140px;
+  width: 150px;
 }
 .block-system .field-name-field-topic,
 .block-system .field-name-field-topics {
@@ -8362,7 +8362,6 @@ a.block-system .field-name-field-add-to-calendar .field-item:focus {
 .block-system .field-name-field-topics .field-item {
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
   font-weight: bold;
   color: #ffffff;
   line-height: 1;
@@ -8372,10 +8371,12 @@ a.block-system .field-name-field-add-to-calendar .field-item:focus {
   background-color: #777777;
   border-radius: 10px;
   display: inline-block;
-  padding: 4px 10px;
+  padding: 5px 10px 3px;
   margin: 0 10px 20px 0;
   background: #333333;
   color: white;
+  font-size: 12px;
+  line-height: 12px;
 }
 .block-system .field-name-field-topic .field-item:empty,
 .block-system .field-name-field-topics .field-item:empty {

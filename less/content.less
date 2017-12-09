@@ -1,9 +1,15 @@
 /*
  * Constants
  */
-@view-thumbnail-width:  (2 * @grid-gutter-width);                                  // ~60px
-@view-thumbnail-height: (3 * @line-height-computed);                               // ~60px
-@view-thumbnail-gutter: (@view-thumbnail-width + floor(@grid-gutter-width / 2));   // ~75px
+@view-thumbnail-width:  (2*@grid-gutter-width);                                         // ~60px
+@view-thumbnail-height: (3*@line-height-computed);                                      // ~60px
+@view-thumbnail-gutter: (@view-thumbnail-width + floor(@grid-gutter-width/2));          // ~75px
+
+@field-topic-font-size:      @font-size-small;                                                  // ~12px
+@field-topic-line-height:    @field-topic-font-size;                                            // ~12px
+@field-topic-padding-top:    floor((@line-height-computed - @field-topic-line-height)/2) + 1;   //  ~5px
+@field-topic-padding-bottom: floor((@line-height-computed - @field-topic-line-height)/2) - 1;   //  ~3px
+@field-topic-padding-side:   floor(@grid-gutter-width/3);                                       // ~10px
 
 /*
  * Generic formatting
@@ -60,7 +66,7 @@ ul {
 
   i {
     min-width: @view-thumbnail-width;
-    margin-right: floor(@grid-gutter-width / 2);
+    margin-right: floor(@grid-gutter-width/2);
     line-height: @line-height-large;
   }
 }
@@ -301,7 +307,7 @@ ul {
   .field-name-field-bible-reference,
   .field-name-field-episode-date {
     .field-label {
-      width: 140px;
+      width: (5*@grid-gutter-width);
     }
   }
 
@@ -320,10 +326,12 @@ ul {
     .field-item {
       .badge;
       display: inline-block;
-      padding: floor((@line-height-computed - 12px)/2) floor(@grid-gutter-width/3);
-      margin: 0 floor(@grid-gutter-width/3) @line-height-computed 0;
+      padding: @field-topic-padding-top @field-topic-padding-side @field-topic-padding-bottom;
+      margin: 0 @field-topic-padding-side @line-height-computed 0;
       background: @text-color;
       color: white;
+      font-size: @field-topic-font-size;
+      line-height: @field-topic-line-height;
     }
   }
 
