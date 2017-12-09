@@ -130,7 +130,7 @@
 
   <div class="row">
 
-    <section class="col-sm-8">
+    <section class="col-xs-12 col-sm-8">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -154,8 +154,15 @@
       <?php print render($page['content']); ?>
     </section>
 
+    <?php if (!empty($page['sidebar_first'])): ?>
+      <aside class="col-xs-12 col-sm-4" role="complementary">
+        <?php print render($page['sidebar_first']); ?>
+      </aside>  <!-- /#sidebar-first -->
+    <?php endif; ?>
+
+
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-4" role="complementary">
+      <aside class="col-xs-12" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
