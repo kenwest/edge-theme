@@ -66,7 +66,7 @@ ul {
 
   i {
     min-width: @view-thumbnail-width;
-    margin-right: floor(@grid-gutter-width/2);
+    margin-right: (@view-thumbnail-gutter - @view-thumbnail-width);
     line-height: @line-height-large;
   }
 }
