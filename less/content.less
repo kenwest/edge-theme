@@ -127,6 +127,21 @@ ul {
   margin-left: @view-thumbnail-gutter;
 }
 
+.no-thumbnail {
+  .views-field-title,
+  .views-field-field-in-activity,
+  .views-field-field-speakers,
+  .views-field-field-date-text,
+  .views-field-taxonomy-vocabulary-1,
+  .views-field-taxonomy-vocabulary-1-1,
+  .views-field-field-staff-contact,
+  .views-field-field-subtitle,
+  .views-field-body,
+  .views-field-summary {
+    margin-left: 0;
+  }
+}
+
 .views-field-taxonomy-vocabulary-1,
 .views-field-field-in-activity {
   margin-bottom: @line-height-computed;
@@ -353,8 +368,6 @@ ul {
     line-height: @line-height-large;
   }
 
-  .views-field-title,
-  .views-field-field-subtitle,
   .field-name-field-subtitle,
   .field-name-field-date-text,
   .field-name-field-episode-date,
