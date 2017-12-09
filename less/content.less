@@ -195,7 +195,6 @@ ul {
 .front {
   .block-system {
     .views-field-field-date-text,
-    .views-field-field-subtitle,
     .views-field-body,
     .views-field-summary {
       font-size: @font-size-large;
@@ -209,7 +208,7 @@ ul {
 }
 
 /*
- * Node and entity formatting
+ * Node and entity and views page display formatting
  */
 
 .block-system {
@@ -328,10 +327,17 @@ ul {
     }
   }
 
+  .views-field-title a,
   .field-name-field-date-text {
     font-weight: bold;
   }
 
+  .views-field-title {
+    font-size: @font-size-h3;
+    line-height: @line-height-large;
+  }
+
+  .views-field-field-subtitle,
   .field-name-field-subtitle,
   .field-name-field-date-text,
   .entity-property-summary {
@@ -339,6 +345,8 @@ ul {
     line-height: @line-height-large;
   }
 
+  .views-field-title,
+  .views-field-field-subtitle,
   .field-name-field-subtitle,
   .field-name-field-date-text,
   .field-name-field-episode-date,

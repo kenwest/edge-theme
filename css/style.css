@@ -8164,7 +8164,6 @@ ul {
   padding: 0;
 }
 .front .block-system .views-field-field-date-text,
-.front .block-system .views-field-field-subtitle,
 .front .block-system .views-field-body,
 .front .block-system .views-field-summary {
   font-size: 18px;
@@ -8174,7 +8173,7 @@ ul {
   display: none;
 }
 /*
- * Node and entity formatting
+ * Node and entity and views page display formatting
  */
 .block-system {
   margin-bottom: 100px;
@@ -8423,15 +8422,23 @@ a.block-system .field-name-field-topics .field-item:focus {
 .nav-pills > li > a > .block-system .field-name-field-topics .field-item {
   margin-left: 3px;
 }
+.block-system .views-field-title a,
 .block-system .field-name-field-date-text {
   font-weight: bold;
 }
+.block-system .views-field-title {
+  font-size: 24px;
+  line-height: 1.3333333;
+}
+.block-system .views-field-field-subtitle,
 .block-system .field-name-field-subtitle,
 .block-system .field-name-field-date-text,
 .block-system .entity-property-summary {
   font-size: 18px;
   line-height: 1.3333333;
 }
+.block-system .views-field-title,
+.block-system .views-field-field-subtitle,
 .block-system .field-name-field-subtitle,
 .block-system .field-name-field-date-text,
 .block-system .field-name-field-episode-date,
