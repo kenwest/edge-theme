@@ -8042,6 +8042,9 @@ p + h6 {
 ul {
   margin-bottom: 0;
 }
+.breadcrumb {
+  display: none;
+}
 .page-node .tabs--primary.nav-tabs {
   display: none;
 }
