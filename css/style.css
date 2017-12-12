@@ -7452,6 +7452,9 @@ table .checkbox input[type="checkbox"] {
     font-size: 60px;
   }
 }
+.navbar-default .navbar-header .navbar-toggles .navbar-toggle:hover {
+  color: #ae710c;
+}
 .front .region-header {
   padding: 1px 0;
   margin: 0 0 20px;
