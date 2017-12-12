@@ -166,8 +166,7 @@ ul {
   margin-bottom: @line-height-computed;
 }
 
-.views-field + .views-field-field-subtitle,
-.view-content > .view-grouping > .view-grouping-content h3,
+.views-field + .views-field-field-subtitle, // Note view-grouping-content h3 doesn't require a margin top
 .views-field + .views-field-body,
 .views-field + .views-field-summary {
   margin-top: @line-height-computed;
@@ -184,6 +183,7 @@ ul {
   font-style: italic;
 }
 
+.views-field-field-video,
 .views-field-field-highlight-video {
   ul {
     list-style: none;
@@ -233,6 +233,28 @@ ul {
   }
 }
 
+.view-reaching-city-video-gallery {
+  .view-content > .view-grouping > .view-grouping-content {
+    .make-row();
+
+    margin-bottom: (2*@line-height-computed);
+
+    h3 {
+      .make-xs-column(12);
+    }
+
+    .views-row {
+      .make-xs-column(12);
+      .make-sm-column(6);
+      .make-md-column(4);
+    }
+
+    .views-row + .views-row {
+      padding-top: 0;
+    }
+  }
+}
+
 .front {
   .block-system {
     .views-field-field-date-text,
@@ -253,7 +275,7 @@ ul {
  */
 
 .block-system {
-  margin-bottom: (5*@line-height-computed);
+  margin-bottom: (2*@line-height-computed);
 
   .field-name-field-in-activity,
   .blog_usernames_blog {

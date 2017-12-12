@@ -6480,7 +6480,9 @@ button.close {
 .front .region-header section:before,
 .front .region-header section:after,
 .stack:before,
-.stack:after {
+.stack:after,
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content:before,
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content:after {
   content: " ";
   display: table;
 }
@@ -6502,7 +6504,8 @@ button.close {
 .modal-footer:after,
 .navbar-default .navbar-header:after,
 .front .region-header section:after,
-.stack:after {
+.stack:after,
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content:after {
   clear: both;
 }
 .center-block {
@@ -8147,7 +8150,6 @@ ul {
   margin-bottom: 20px;
 }
 .views-field + .views-field-field-subtitle,
-.view-content > .view-grouping > .view-grouping-content h3,
 .views-field + .views-field-body,
 .views-field + .views-field-summary {
   margin-top: 20px;
@@ -8161,6 +8163,7 @@ ul {
 .views-field-field-date-text {
   font-style: italic;
 }
+.views-field-field-video ul,
 .views-field-field-highlight-video ul {
   list-style: none;
   padding: 0;
@@ -8194,6 +8197,42 @@ ul {
 .view-reaching-city-civicrm-event-price .views-row + h3 {
   padding: 0;
 }
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 40px;
+}
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content h3 {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content .views-row {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content .views-row {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content .views-row {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content .views-row + .views-row {
+  padding-top: 0;
+}
 .front .block-system .views-field-field-date-text,
 .front .block-system .views-field-body,
 .front .block-system .views-field-summary {
@@ -8207,7 +8246,7 @@ ul {
  * Node and entity and views page display formatting
  */
 .block-system {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 .block-system .field-name-field-in-activity,
 .block-system .blog_usernames_blog {
