@@ -8047,7 +8047,8 @@ ul {
 }
 .page-header,
 .block-title,
-.views-field-title {
+.views-field-title,
+.view-content > .view-grouping > .view-grouping-header {
   padding: 0;
   border: 0;
   margin: 0 0 20px;
@@ -8056,7 +8057,8 @@ ul {
 }
 .page-header i,
 .block-title i,
-.views-field-title i {
+.views-field-title i,
+.view-content > .view-grouping > .view-grouping-header i {
   min-width: 60px;
   margin-right: 15px;
   line-height: 1.3333333;
@@ -8080,6 +8082,18 @@ ul {
 /*
  * Views fields
  */
+.views-field-title a,
+.view-content > .view-grouping > .view-grouping-header a {
+  font-weight: bold;
+}
+.views-field-field-subtitle,
+.view-content > .view-grouping > .view-grouping-content h3,
+.views-field-summary {
+  color: #333333;
+  font-size: 18px;
+  line-height: 1.3333333;
+  font-weight: normal;
+}
 .views-field-field-in-activity {
   display: none;
 }
@@ -8101,6 +8115,7 @@ ul {
   font-size: 40px;
 }
 .views-field-title,
+.view-content > .view-grouping > .view-grouping-header,
 .views-field-field-in-activity,
 .views-field-field-speakers,
 .views-field-field-date-text,
@@ -8108,11 +8123,13 @@ ul {
 .views-field-taxonomy-vocabulary-1-1,
 .views-field-field-staff-contact,
 .views-field-field-subtitle,
+.view-content > .view-grouping > .view-grouping-content h3,
 .views-field-body,
 .views-field-summary {
   margin-left: 75px;
 }
 .no-thumbnail .views-field-title,
+.no-thumbnail .view-content > .view-grouping > .view-grouping-header,
 .no-thumbnail .views-field-field-in-activity,
 .no-thumbnail .views-field-field-speakers,
 .no-thumbnail .views-field-field-date-text,
@@ -8120,6 +8137,7 @@ ul {
 .no-thumbnail .views-field-taxonomy-vocabulary-1-1,
 .no-thumbnail .views-field-field-staff-contact,
 .no-thumbnail .views-field-field-subtitle,
+.no-thumbnail .view-content > .view-grouping > .view-grouping-content h3,
 .no-thumbnail .views-field-body,
 .no-thumbnail .views-field-summary {
   margin-left: 0;
@@ -8129,6 +8147,7 @@ ul {
   margin-bottom: 20px;
 }
 .views-field + .views-field-field-subtitle,
+.view-content > .view-grouping > .view-grouping-content h3,
 .views-field + .views-field-body,
 .views-field + .views-field-summary {
   margin-top: 20px;
@@ -8435,15 +8454,16 @@ a.block-system .field-name-field-topics .field-item:focus {
 .nav-pills > li > a > .block-system .field-name-field-topics .field-item {
   margin-left: 3px;
 }
-.block-system .views-field-title a,
 .block-system .field-name-field-date-text {
   font-weight: bold;
 }
-.block-system .views-field-title {
+.block-system .views-field-title,
+.block-system .view-content > .view-grouping > .view-grouping-header {
   font-size: 24px;
   line-height: 1.3333333;
 }
 .block-system .views-field-field-subtitle,
+.block-system .view-content > .view-grouping > .view-grouping-content h3,
 .block-system .field-name-field-subtitle,
 .block-system .field-name-field-date-text,
 .block-system .entity-property-summary {
@@ -8451,6 +8471,7 @@ a.block-system .field-name-field-topics .field-item:focus {
   line-height: 1.3333333;
 }
 .block-system .field-name-field-subtitle,
+.block-system .view-content > .view-grouping > .view-grouping-content h3,
 .block-system .field-name-field-date-text,
 .block-system .field-name-field-episode-date,
 .block-system .field-name-body,
