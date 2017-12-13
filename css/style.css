@@ -8742,6 +8742,29 @@ a.page-civicrm-event .views-field-id:focus {
 .region-footer .footer-column .nav > li > a:hover {
   color: #201c1c;
 }
+.region-footer .copyright {
+  margin-left: 50%;
+  float: left;
+  width: 50%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .region-footer .copyright {
+    margin-left: 75%;
+  }
+}
+@media (min-width: 768px) {
+  .region-footer .copyright {
+    float: left;
+    width: 25%;
+  }
+}
+.region-footer .copyright p {
+  padding: 10px 15px;
+}
 .logos-live-cbf-attribution {
   margin-top: -30px;
   width: 100%;
