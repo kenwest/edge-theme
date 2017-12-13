@@ -44,6 +44,17 @@
       color: @text-color;
     }
   }
+
+  .copyright {
+    .make-xs-column-offset(6);
+    .make-xs-column(6);
+    .make-sm-column-offset(9);
+    .make-sm-column(3);
+
+    p {
+      padding: floor(@line-height-computed / 2) floor(@grid-gutter-width / 2);
+    }
+  }
 }
 
 .logos-live-cbf-attribution {
