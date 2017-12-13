@@ -6482,7 +6482,9 @@ button.close {
 .stack:before,
 .stack:after,
 .view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content:before,
-.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content:after {
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content:after,
+.region-footer:before,
+.region-footer:after {
   content: " ";
   display: table;
 }
@@ -6505,7 +6507,8 @@ button.close {
 .navbar-default .navbar-header:after,
 .front .region-header section:after,
 .stack:after,
-.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content:after {
+.view-reaching-city-video-gallery .view-content > .view-grouping > .view-grouping-content:after,
+.region-footer:after {
   clear: both;
 }
 .center-block {
@@ -8697,6 +8700,47 @@ a.page-civicrm-event .views-field-id:focus {
 }
 .footer a {
   color: white;
+}
+.region-footer {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.region-footer .footer-column {
+  float: left;
+  width: 50%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .region-footer .footer-column {
+    float: left;
+    width: 25%;
+  }
+}
+.region-footer .footer-column .block-panel {
+  padding-top: 40px;
+}
+.region-footer .footer-column .block-panel > .block-title {
+  margin-top: -40px;
+}
+.region-footer .footer-column .block-title,
+.region-footer .footer-column .nav > li > a {
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+  margin: 0;
+  padding: 5px 15px;
+}
+.region-footer .footer-column .block-title {
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.region-footer .footer-column .nav > li > a:hover {
+  color: #201c1c;
 }
 .logos-live-cbf-attribution {
   margin-top: -30px;
