@@ -12,6 +12,15 @@
 }
 
 /*
+ * Content that has it's height standardised (min-height set to a multiple of
+ * @line-height-computed via Javascript) will often have a margin-bottom. The
+ * result is too much white space. Remove the margin-bottom in this case.
+ */
+.cbf-standard-height {
+  margin-bottom: 0;
+}
+
+/*
  * Format paragraphs with left and right aligned images
  */
 .paragraph-image-left,
