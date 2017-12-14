@@ -8268,9 +8268,10 @@ ul {
 /*
  * Block formatting
  */
-.region-sidebar-first .block-title {
-  font-size: 24px;
-  line-height: 1.3333333;
+@media (min-width: 768px) {
+  .region-sidebar-first .block-title {
+    font-size: 24px;
+  }
 }
 /*
  * Node and entity and views page display formatting

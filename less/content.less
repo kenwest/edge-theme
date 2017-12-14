@@ -288,8 +288,9 @@ ul {
  */
 .region-sidebar-first {
   .block-title {
-    font-size: @font-size-h3;
-    line-height: @line-height-large;
+    @media (min-width: @screen-sm-min) {
+      font-size: @font-size-h3;
+    }
   }
 }
 
