@@ -8579,30 +8579,30 @@ a.block-system .field-name-field-topics .field-item:focus {
 /*
  * CiviCRM Event entity pages
  */
-.page-civicrm-event .views-field-nothing {
+.page-civicrm-event- .views-field-nothing {
   /* Address */
   color: #201c1c;
   line-height: 1.3333333;
   font-size: 18px;
 }
-.page-civicrm-event .view-content h3 {
+.page-civicrm-event- .view-content h3 {
   color: #201c1c;
   line-height: 20px;
   font-size: 14px;
 }
-.page-civicrm-event .view-content h3.views-field-title {
+.page-civicrm-event- .view-content h3.views-field-title {
   font-size: 24px;
   line-height: 1.3333333;
 }
 @media (min-width: 768px) {
-  .page-civicrm-event .region-sidebar-first .view-content h3.views-field-title {
+  .page-civicrm-event- .region-sidebar-first .view-content h3.views-field-title {
     font-size: 18px;
   }
 }
-.page-civicrm-event .views-field-amount {
+.page-civicrm-event- .views-field-amount {
   float: right;
 }
-.page-civicrm-event .views-field-id {
+.page-civicrm-event- .views-field-id {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
@@ -8622,41 +8622,41 @@ a.block-system .field-name-field-topics .field-item:focus {
   font-size: 18px;
   line-height: 20px;
 }
-.page-civicrm-event .views-field-id:empty {
+.page-civicrm-event- .views-field-id:empty {
   display: none;
 }
-.btn .page-civicrm-event .views-field-id {
+.btn .page-civicrm-event- .views-field-id {
   position: relative;
   top: -1px;
 }
-.btn-xs .page-civicrm-event .views-field-id,
-.btn-group-xs > .btn .page-civicrm-event .views-field-id {
+.btn-xs .page-civicrm-event- .views-field-id,
+.btn-group-xs > .btn .page-civicrm-event- .views-field-id {
   top: 0;
   padding: 1px 5px;
 }
-a.page-civicrm-event .views-field-id:hover,
-a.page-civicrm-event .views-field-id:focus {
+a.page-civicrm-event- .views-field-id:hover,
+a.page-civicrm-event- .views-field-id:focus {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
 }
-.list-group-item.active > .page-civicrm-event .views-field-id,
-.nav-pills > .active > a > .page-civicrm-event .views-field-id {
+.list-group-item.active > .page-civicrm-event- .views-field-id,
+.nav-pills > .active > a > .page-civicrm-event- .views-field-id {
   color: #ef9d18;
   background-color: #ffffff;
 }
-.list-group-item > .page-civicrm-event .views-field-id {
+.list-group-item > .page-civicrm-event- .views-field-id {
   float: right;
 }
-.list-group-item > .page-civicrm-event .views-field-id + .page-civicrm-event .views-field-id {
+.list-group-item > .page-civicrm-event- .views-field-id + .page-civicrm-event- .views-field-id {
   margin-right: 5px;
 }
-.nav-pills > li > a > .page-civicrm-event .views-field-id {
+.nav-pills > li > a > .page-civicrm-event- .views-field-id {
   margin-left: 3px;
 }
-.page-civicrm-event .views-field-id a,
-.page-civicrm-event .views-field-id a:hover,
-.page-civicrm-event .views-field-id a:focus {
+.page-civicrm-event- .views-field-id a,
+.page-civicrm-event- .views-field-id a:hover,
+.page-civicrm-event- .views-field-id a:focus {
   font-weight: bold;
   color: white;
   background: #ef9d18;
