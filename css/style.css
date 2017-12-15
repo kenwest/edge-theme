@@ -8295,6 +8295,11 @@ ul {
 }
 .block-system .field-name-field-image,
 .block-system .field-name-field-series-image,
+.block-system .field-name-field-date-text {
+  margin-top: 20px;
+}
+.block-system .field-name-field-image,
+.block-system .field-name-field-series-image,
 .block-system .field-name-field-civievent,
 .block-system .field-name-field-add-to-calendar {
   float: right;
