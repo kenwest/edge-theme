@@ -33,6 +33,9 @@ function edge_preprocess_page(&$variables) {
         var fraction = height % 20;
         if (jQuery(this).css("font-size") !== "14px" && fraction !== 0) {
           jQuery(this).css("min-height",  height - fraction + 20).addClass("cbf-standard-height");
+          if (fraction > 10) {
+            jQuery(this).css("margin-bottom", 0);
+          }
         }
         else {
           cbfStandardiseHeight(jQuery(this).children().not("iframe, form"));
@@ -40,7 +43,7 @@ function edge_preprocess_page(&$variables) {
       });
     };
     function cbfStandardiseHeights() {
-      jQuery(".cbf-standard-height").css("min-height", "").removeClass("cbf-standard-height");
+      jQuery(".cbf-standard-height").css("min-height", "").css("margin-bottom", "").removeClass("cbf-standard-height");
       cbfStandardiseHeight(jQuery(".main-container"));
     };
     jQuery(document).ready( function() {
