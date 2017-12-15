@@ -8294,8 +8294,7 @@ ul {
   display: none;
 }
 .block-system .field-name-field-image,
-.block-system .field-name-field-series-image,
-.block-system .field-name-field-date-text {
+.block-system .field-name-field-series-image {
   margin-top: 20px;
 }
 .block-system .field-name-field-image,
@@ -8540,6 +8539,7 @@ a.block-system .field-name-field-topics .field-item:focus {
   margin-left: 3px;
 }
 .block-system .field-name-field-date-text {
+  margin: 20px 0;
   font-weight: bold;
 }
 .block-system .views-field-field-subtitle,
