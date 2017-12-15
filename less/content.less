@@ -99,10 +99,16 @@ ul {
 /*
  * Views fields
  */
-.views-field-title a,
-.view-content > .view-grouping > .view-grouping-header a {
-  font-weight: bold;
+.views-field-title,
+.view-content > .view-grouping > .view-grouping-header {
+  font-size: @font-size-h3;
+  line-height: @line-height-large;
+
+  a {
+    font-weight: bold;
+  }
 }
+
 
 .views-field-field-subtitle,
 .view-content > .view-grouping > .view-grouping-content h3,
@@ -292,6 +298,13 @@ ul {
       font-size: @font-size-h3;
     }
   }
+
+  .views-field-title,
+  .view-content > .view-grouping > .view-grouping-header {
+    @media (min-width: @screen-sm-min) {
+      font-size: @font-size-h4;
+    }
+  }
 }
 
 /*
@@ -418,12 +431,6 @@ ul {
 
   .field-name-field-date-text {
     font-weight: bold;
-  }
-
-  .views-field-title,
-  .view-content > .view-grouping > .view-grouping-header {
-    font-size: @font-size-h3;
-    line-height: @line-height-large;
   }
 
   .views-field-field-subtitle,

@@ -8102,6 +8102,11 @@ ul {
 /*
  * Views fields
  */
+.views-field-title,
+.view-content > .view-grouping > .view-grouping-header {
+  font-size: 24px;
+  line-height: 1.3333333;
+}
 .views-field-title a,
 .view-content > .view-grouping > .view-grouping-header a {
   font-weight: bold;
@@ -8271,6 +8276,12 @@ ul {
 @media (min-width: 768px) {
   .region-sidebar-first .block-title {
     font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .region-sidebar-first .views-field-title,
+  .region-sidebar-first .view-content > .view-grouping > .view-grouping-header {
+    font-size: 18px;
   }
 }
 /*
@@ -8526,11 +8537,6 @@ a.block-system .field-name-field-topics .field-item:focus {
 }
 .block-system .field-name-field-date-text {
   font-weight: bold;
-}
-.block-system .views-field-title,
-.block-system .view-content > .view-grouping > .view-grouping-header {
-  font-size: 24px;
-  line-height: 1.3333333;
 }
 .block-system .views-field-field-subtitle,
 .block-system .view-content > .view-grouping > .view-grouping-content h3,
