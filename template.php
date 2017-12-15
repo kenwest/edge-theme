@@ -33,7 +33,7 @@ function edge_preprocess_page(&$variables) {
         var fraction = height % 20;
         if (jQuery(this).css("font-size") !== "14px" && fraction !== 0) {
           jQuery(this).css("min-height",  height - fraction + 20).addClass("cbf-standard-height");
-          if (fraction > 10) {
+          if (fraction < 10) {
             jQuery(this).css("margin-bottom", 0);
           }
         }
