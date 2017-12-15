@@ -8659,6 +8659,11 @@ a.page-civicrm-event- .views-field-id:focus {
 }
 @media (min-width: 768px) {
   .page-civicrm-event- .views-field-id {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .page-civicrm-event- .views-field-id {
     font-size: 30px;
   }
 }
