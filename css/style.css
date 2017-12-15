@@ -8730,6 +8730,12 @@ a.page-civicrm-event- .views-field-id:focus {
   padding: 0 0 0 15px;
   border: 0;
 }
+/*
+ * CiviCRM Event registration
+ */
+.progress.payment .progress-bar {
+  color: #201c1c;
+}
 .footer {
   background-color: #201c1c;
   color: white;
