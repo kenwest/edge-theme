@@ -493,6 +493,19 @@ ul {
     font-size: @font-size-base;
   }
 
+  .view-content h3.views-field-title {
+    font-size: @font-size-h3;
+    line-height: @line-height-large;
+  }
+
+  .region-sidebar-first {
+    .view-content h3.views-field-title {
+      @media (min-width: @screen-sm-min) {
+        font-size: @font-size-h4;
+      }
+    }
+  }
+
   .views-field-amount {
     float: right;
   }
