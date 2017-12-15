@@ -8192,6 +8192,12 @@ ul {
 #block-views-exp-national-library-page-1 .views-exposed-widget.views-widget-filter-title_1 {
   display: none;
 }
+.view-reaching-city-civicrm-event-date-location {
+  margin-bottom: -40px;
+}
+.view-reaching-city-civicrm-event-price {
+  margin-bottom: -20px;
+}
 .view-reaching-city-civicrm-event-price h3 {
   margin: 0;
 }
@@ -8201,6 +8207,7 @@ ul {
   display: none;
 }
 .view-reaching-city-civicrm-event-price h3 .Select {
+  display: block;
   padding-top: 20px;
 }
 .view-reaching-city-civicrm-event-price .views-row {
@@ -8611,8 +8618,8 @@ a.block-system .field-name-field-topics .field-item:focus {
   padding: 20px 15px;
   border-radius: 30px;
   background: #ef9d18;
-  font-size: 18px;
   line-height: 20px;
+  font-size: 36px;
 }
 .page-civicrm-event- .views-field-id:empty {
   display: none;
@@ -8645,6 +8652,16 @@ a.page-civicrm-event- .views-field-id:focus {
 }
 .nav-pills > li > a > .page-civicrm-event- .views-field-id {
   margin-left: 3px;
+}
+@media (min-width: 768px) {
+  .page-civicrm-event- .views-field-id {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-civicrm-event- .views-field-id {
+    font-size: 36px;
+  }
 }
 .page-civicrm-event- .views-field-id a,
 .page-civicrm-event- .views-field-id a:hover,

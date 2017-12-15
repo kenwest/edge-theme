@@ -217,7 +217,13 @@ ul {
   }
 }
 
+.view-reaching-city-civicrm-event-date-location {
+  margin-bottom: (-2*@line-height-computed);
+}
+
 .view-reaching-city-civicrm-event-price {
+  margin-bottom: (-1*@line-height-computed);
+
   h3 {
     margin: 0;
 
@@ -228,6 +234,7 @@ ul {
     }
 
     .Select {
+      display: block;
       padding-top: @line-height-computed;
     }
   }
@@ -516,8 +523,16 @@ ul {
     padding: @line-height-computed floor(@grid-gutter-width/2);
     border-radius: @grid-gutter-width;
     background: @brand-primary;
-    font-size: @font-size-large;
     line-height: @line-height-computed;
+
+    // Mobile:
+      font-size: @font-size-h1;
+    @media (min-width: @screen-sm-min) {
+      font-size: @font-size-h2;
+    }
+    @media (min-width: @screen-lg-min) {
+      font-size: @font-size-h1;
+    }
 
     a,
     a:hover,
