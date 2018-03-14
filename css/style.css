@@ -8006,9 +8006,13 @@ div.token-input-dropdown {
   width: 100%;
   height: auto;
   margin: 20px 0;
+  border-width: 0;
+  background-color: transparent;
+  box-shadow: unset;
 }
 .progress.payment .progress-bar {
   width: 33.33%;
+  margin-top: 5px;
   padding: 5px;
   font-size: inherit;
 }
@@ -8016,11 +8020,23 @@ div.token-input-dropdown {
   background-color: #201c1c;
 }
 .progress.payment .progress-bar.present {
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
   font-weight: bold;
   background-color: #ef9d18;
 }
 .progress.payment .progress-bar.future {
   background-color: #f6c577;
+}
+.progress.payment .progress-bar:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.progress.payment .progress-bar:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 /*
  * GMap configuration
