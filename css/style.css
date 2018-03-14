@@ -8806,6 +8806,9 @@ a.page-civicrm-event- .views-field-id:focus {
 .progress.payment .progress-bar {
   color: #201c1c;
 }
+.progress.payment .progress-bar.past {
+  color: white;
+}
 .footer {
   background-color: #201c1c;
   color: white;
