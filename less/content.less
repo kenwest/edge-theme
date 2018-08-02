@@ -62,6 +62,7 @@ ul {
 .page-header,
 .block-title,
 .views-field-title,
+.views-field-field-title,
 .view-content > .view-grouping > .view-grouping-header {
   padding: 0;
   border: 0;
@@ -100,6 +101,7 @@ ul {
  * Views fields
  */
 .views-field-title,
+.views-field-field-title,
 .view-content > .view-grouping > .view-grouping-header {
   font-size: @font-size-h3;
   line-height: @line-height-large;
@@ -140,6 +142,7 @@ ul {
 }
 
 .views-field-title,
+.views-field-field-title,
 .view-content > .view-grouping > .view-grouping-header,
 .views-field-field-in-activity,
 .views-field-field-speakers,
@@ -156,6 +159,7 @@ ul {
 
 .no-thumbnail {
   .views-field-title,
+  .views-field-field-title,
   .view-content > .view-grouping > .view-grouping-header,
   .views-field-field-in-activity,
   .views-field-field-speakers,
@@ -307,6 +311,7 @@ ul {
   }
 
   .views-field-title,
+  .views-field-field-title,
   .view-content > .view-grouping > .view-grouping-header {
     @media (min-width: @screen-sm-min) {
       font-size: @font-size-h4;
@@ -493,27 +498,33 @@ ul {
  * CiviCRM Event entity pages
  */
 .page-civicrm-event- {
-  .views-field-nothing {    /* Address */
+  .views-field-nothing {                // Address
     color: @text-color;
     line-height: @line-height-large;
     font-size: @font-size-large;
   }
 
-  .view-content h3 {                       // A H3 that is not a views-field-title
-    color: @text-color;
-    line-height: @line-height-computed;
-    font-size: @font-size-base;
-  }
+  .view-content {
+    h3 {                                // A H3 that is not a views-field-title
+      color: @text-color;
+      line-height: @line-height-computed;
+      font-size: @font-size-base;
+    }
 
-  .view-content h3.views-field-title {     // A H3 that is a views-field-title
-    font-size: @font-size-h3;
-    line-height: @line-height-large;
+    h3.views-field-title,
+    h3.views-field-field-title {        // A H3 that is a views-field-title
+      font-size: @font-size-h3;
+      line-height: @line-height-large;
+    }
   }
 
   .region-sidebar-first {
-    .view-content h3.views-field-title {
-      @media (min-width: @screen-sm-min) {
-        font-size: @font-size-h4;
+    .view-content {
+      h3.views-field-title,
+      h3.views-field-field-title {
+        @media (min-width: @screen-sm-min) {
+          font-size: @font-size-h4;
+        }
       }
     }
   }
