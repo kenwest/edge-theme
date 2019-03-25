@@ -7816,39 +7816,11 @@ a.link-button:focus {
     visibility: visible;
   }
 }
-.block a.jp-play:before {
-  content: "\f01d";
-  font-size: 42px;
-}
-.block a.jp-pause:before {
-  content: "\f28c";
-  font-size: 42px;
-}
-.block a.jp-mute:before {
-  content: "\f026";
-  font-size: 18px;
-}
-.block a.jp-unmute:before {
-  content: "\f028";
-  font-size: 18px;
-}
 .block a.jp-play,
 .block a.jp-pause,
 .block a.jp-mute,
 .block a.jp-unmute {
-  background: none;
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
   font-size: 0;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.block a.jp-play:hover,
-.block a.jp-pause:hover,
-.block a.jp-mute:hover,
-.block a.jp-unmute:hover {
-  background: none;
 }
 .block .addthis_toolbox {
   margin-top: 40px;
@@ -8109,7 +8081,12 @@ ul {
 .block-title i,
 .views-field-title i,
 .views-field-field-title i,
-.view-content > .view-grouping > .view-grouping-header i {
+.view-content > .view-grouping > .view-grouping-header i,
+.page-header svg.svg-inline--fa,
+.block-title svg.svg-inline--fa,
+.views-field-title svg.svg-inline--fa,
+.views-field-field-title svg.svg-inline--fa,
+.view-content > .view-grouping > .view-grouping-header svg.svg-inline--fa {
   min-width: 60px;
   margin-right: 15px;
   line-height: 1.3333333;
@@ -8167,7 +8144,11 @@ ul {
 .views-field-field-thumbnail-image i,
 .views-field-field-is-audio i,
 .views-field-field-is-text i,
-.views-field-field-is-video i {
+.views-field-field-is-video i,
+.views-field-field-thumbnail-image svg.svg-inline--fa,
+.views-field-field-is-audio svg.svg-inline--fa,
+.views-field-field-is-text svg.svg-inline--fa,
+.views-field-field-is-video svg.svg-inline--fa {
   min-width: 60px;
   height: 60px;
   font-size: 40px;
